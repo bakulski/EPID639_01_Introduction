@@ -26,7 +26,7 @@ An R command (we'll also call it code or a code chunk) will be grey and look lik
 ```{r}
 #| label: code
 
-print("I'm code")
+print("DID THIS WORK?")
 ```
 
 Directly after the code chunk will be the output of the code. The code chunk is `print("I'm code")` and the output is "I'm code".
