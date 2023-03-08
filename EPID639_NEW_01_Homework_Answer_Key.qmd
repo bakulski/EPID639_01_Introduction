@@ -1,0 +1,50 @@
+---
+title: "EPID639 Epidemiologic Data Analysis using R"
+subtitle: "Homework 1"
+author: "Kelly Bakulski, Huda Bashir, Joe Wardell"
+date: "Last compiled on `r format(Sys.Date(), '%B %d, %Y')`"
+format: html
+editor: source
+---
+
+## Problem 1
+
+## 1. The estimated glomerular filtration rate (eGFR) is a test that measures kidney function and/or stage of kidney disease. What is the eGFR of a 45-year-old female who has a serum creatinine value of 60.4 ?
+
+## NOTE: There are multiple equations that can be used but for this problem use: 142 x (Scr /61.88)^-0.241 x 0.9938^Age x 1.012, https://www.kidney.org/content/national-kidney-foundation-laboratory-engagement-working-group-recommendations-implementing (Table S3)
+
+```{r}
+
+142 * ((60.4/61.88)^-0.241) * (0.9938^45) * 1.012
+
+```
+## Problem 2
+
+## 2. Calculate the Body Mass Index (** should we use BMI - BMI is a common variable/easy to calculate... but also can be controversial) for a person who is 5'9" and weighs 170 lbs
+
+```{r}
+
+(170/(69)^2)*703
+
+```
+## Problem 3
+
+## 3.1 Make a vector 'bmi' as a series of BMI values: 18.5, 24.3, 28.9, 32.0, 26.7, 21.4, 36.2, 29.5, 22.3, 28.6
+
+## 3.2 Calculate summary statistics of BMI values
+
+## 3.3 Calculate the sum of all BMI variables and hand calculate the average. Do you get the same value?
+```{r}
+
+## Create vector
+bmi <- c(18.5, 24.3, 28.9, 32.0, 26.7, 21.4, 36.2, 29.5, 22.3, 28.6)
+
+
+## calculate summary statistics
+summary(bmi)
+
+
+## hand calculate average
+sum(bmi)/10
+
+```
